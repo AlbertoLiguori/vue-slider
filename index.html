@@ -10,6 +10,7 @@
 
         <!-- LINK BOOTSTRAP -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
         <!-- LINK TO MY CSS -->
         <link rel="stylesheet" href="css/style.css">
 
@@ -25,61 +26,63 @@
         <title>New Project</title>
 
     </head>
+
     <body>
-      <div id="root">
 
-            <div class="container">
+            <div id="root">
 
-                  <div class="row">
+                  <div class="container">
 
-                      <div class="col-2 d-flex justify-content-center align-items-center">
+                        <div class="row">
 
-                            <a href="#" @click="movePrev">
+                            <div class="col-2 d-flex justify-content-center align-items-center">
 
-                                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+                                  <a href="#" @click="movePrev">
 
-                            </a>
+                                      <i class="fa fa-arrow-left" aria-hidden="true"></i>
 
-                      </div>
+                                  </a>
 
-                      <div class="col">
+                            </div>
 
-                          <img :src="imgSources[currentSrcIndex]" alt="">
+                            <div class="col">
 
-                      </div>
+                                <img :src="imgSources[currentSrcIndex]" alt="">
 
-                      <div class="col-2 d-flex justify-content-center align-items-center">
+                            </div>
 
-                          <a href="#" @click="moveNext">
+                            <div class="col-2 d-flex justify-content-center align-items-center">
 
-                              <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                <a href="#" @click="moveNext">
 
-                          </a>
+                                    <i class="fa fa-arrow-right" aria-hidden="true"></i>
 
-                      </div>
+                                </a>
 
-                  </div>
+                            </div>
 
-                  <div class="row">
+                        </div>
 
-                      <div class="col d-flex justify-content-center align-items-center">
+                        <div class="row">
 
-                          <select class="" name="" v-model="currentSrcIndex">
+                            <div class="col d-flex justify-content-center align-items-center">
 
-                                  <option :value="n-1" v-for="n in imgSources.length">{{n}}</option>
+                                <select class="" name="" v-model="currentSrcIndex">
 
-                          </select>
+                                        <option :value="n-1" v-for="n in imgSources.length">{{n}}</option>
 
-                      </div>
+                                </select>
+
+                            </div>
+
+                        </div>
 
                   </div>
 
             </div>
 
-      </div>
-
-        <script src="script.js"></script>
+            <script src="script.js"></script>
 
     </body>
-    
+
 </html>

@@ -18,14 +18,13 @@ const sliderApp = new Vue({
 
   data:{
 
-    // data è un array di oggetti ottenuto da lorem picsum e predsente in un altro file js
     imgSources:data.map(element => element.picture_url),
 
-    // questo rappresenterà indice dell'array nel quale devo eseguire le operazioni
     currentSrcIndex:0,
   },
 
   methods:{
+
     movePrev:function(){
 
       if(this.currentSrcIndex==0){
