@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+        <!-- LINK TO FONTAWESOME -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+
+        <!-- LINK BOOTSTRAP -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <!-- LINK TO MY CSS -->
+        <link rel="stylesheet" href="css/style.css">
+
+        <!-- LINK TO JQUERY -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+
+        <!-- LINK TO VUE -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+
+        <!-- LINK TO JS FUNCTIONS -->
+        <script src="functions.js" charset="utf-8"></script>
+
+        <title>New Project</title>
+
+    </head>
+    <body>
+      <div id="root">
+
+            <div class="container">
+
+                  <div class="row">
+
+                      <div class="col-2 d-flex justify-content-center align-items-center">
+
+                            <a href="#" @click="movePrev">
+
+                                <i class="fa fa-arrow-left" aria-hidden="true"></i>
+
+                            </a>
+
+                      </div>
+
+                      <div class="col">
+
+                          <img :src="imgSources[currentSrcIndex]" alt="">
+
+                      </div>
+
+                      <div class="col-2 d-flex justify-content-center align-items-center">
+
+                          <a href="#" @click="moveNext">
+
+                              <i class="fa fa-arrow-right" aria-hidden="true"></i>
+
+                          </a>
+
+                      </div>
+
+                  </div>
+
+                  <div class="row">
+
+                      <div class="col d-flex justify-content-center align-items-center">
+
+                          <select class="" name="" v-model="currentSrcIndex">
+
+                                  <option :value="n-1" v-for="n in imgSources.length">{{n}}</option>
+
+                          </select>
+
+                      </div>
+
+                  </div>
+
+            </div>
+
+      </div>
+
+        <script src="script.js"></script>
+
+    </body>
+    
+</html>
